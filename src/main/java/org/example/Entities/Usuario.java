@@ -4,81 +4,81 @@ import java.util.StringJoiner;
 
 public class Usuario {
 
-    private int ID;
-    private String NOME;
-    private String EMAIL;
-    private String SENHA;
-    private String TIPO_USUARIO;
-    private int PONTOS;
+    private int id_usuario;
+    private String nome_usuario;
+    private String email_usuario;
+    private String senha_usuario;
+    private String tipo_usuario;
+    private int pontos_usuario;
 
     public Usuario(){}
 
-    public Usuario(int ID, String NOME, String EMAIL, String SENHA, String TIPO_USUARIO, int PONTOS) {
-        this.ID = ID;
-        this.NOME = NOME;
-        this.EMAIL = EMAIL;
-        this.SENHA = SENHA;
-        this.TIPO_USUARIO = TIPO_USUARIO;
-        this.PONTOS = PONTOS;
+    public Usuario(int id_usuario, String nome_usuario, String email_usuario, String senha_usuario, String tipo_usuario, int pontos_usuario) {
+        this.id_usuario = id_usuario;
+        this.nome_usuario = nome_usuario;
+        this.email_usuario = email_usuario;
+        this.senha_usuario = senha_usuario;
+        this.tipo_usuario = tipo_usuario;
+        this.pontos_usuario = pontos_usuario;
     }
 
-    public int getID() {
-        return ID;
+    public int getId_usuario() {
+        return id_usuario;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
-    public String getNOME() {
-        return NOME;
+    public String getNome_usuario() {
+        return nome_usuario;
     }
 
-    public void setNOME(String NOME) {
-        this.NOME = NOME;
+    public void setNome_usuario(String nome_usuario) {
+        this.nome_usuario = nome_usuario;
     }
 
-    public String getEMAIL() {
-        return EMAIL;
+    public String getEmail_usuario() {
+        return email_usuario;
     }
 
-    public void setEMAIL(String EMAIL) {
-        this.EMAIL = EMAIL;
+    public void setEmail_usuario(String email_usuario) {
+        this.email_usuario = email_usuario;
     }
 
-    public String getSENHA() {
-        return SENHA;
+    public String getSenha_usuario() {
+        return senha_usuario;
     }
 
-    public void setSENHA(String SENHA) {
-        this.SENHA = SENHA;
+    public void setSenha_usuario(String senha_usuario) {
+        this.senha_usuario = senha_usuario;
     }
 
-    public String getTIPO_USUARIO() {
-        return TIPO_USUARIO;
+    public String getTipo_usuario() {
+        return tipo_usuario;
     }
 
-    public void setTIPO_USUARIO(String TIPO_USUARIO) {
-        this.TIPO_USUARIO = TIPO_USUARIO;
+    public void setTipo_usuario(String tipo_usuario) {
+        this.tipo_usuario = tipo_usuario;
     }
 
-    public int getPONTOS() {
-        return PONTOS;
+    public int getPontos_usuario() {
+        return pontos_usuario;
     }
 
-    public void setPONTOS(int PONTOS) {
-        this.PONTOS = PONTOS;
+    public void setPontos_usuario(int pontos_usuario) {
+        this.pontos_usuario = pontos_usuario;
     }
 
     @Override
     public String toString() {
         return new StringJoiner(", ", Usuario.class.getSimpleName() + "[", "]")
-                .add("ID=" + ID)
-                .add("NOME='" + NOME + "'")
-                .add("EMAIL='" + EMAIL + "'")
-                .add("SENHA='" + SENHA + "'")
-                .add("TIPO_USUARIO='" + TIPO_USUARIO + "'")
-                .add("PONTOS=" + PONTOS)
+                .add("id_usuario=" + id_usuario)
+                .add("nome_usuario='" + nome_usuario + "'")
+                .add("email_usuario='" + email_usuario + "'")
+                .add("senha_usuario='" + senha_usuario + "'")
+                .add("tipo_usuario='" + tipo_usuario + "'")
+                .add("pontos_usuario=" + pontos_usuario)
                 .toString();
     }
 }
