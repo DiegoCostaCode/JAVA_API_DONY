@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class DatabaseConfiguration implements Loggable<String> {
 
-    private static final String PROPERTIES_FILE = "database.properties";
+    private static final String PROPERTIES_FILE = "src/main/resources/database.properties";
     private static Properties props = new Properties();
 
     static {

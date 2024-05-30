@@ -14,7 +14,7 @@ public interface Loggable<T> {
         LOGGER.error(message.toString());
     }
 
-    default void logDebug(T message) {
+    static void logDebug(String message) {
         LOGGER.debug(message.toString());
     }
 }
