@@ -44,6 +44,4 @@ public class UsuarioResource implements Loggable{
             return Response.serverError().build();
         }
     }
-
-
 }

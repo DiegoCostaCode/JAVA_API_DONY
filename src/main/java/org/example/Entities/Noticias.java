@@ -4,93 +4,91 @@ import java.util.StringJoiner;
 
 public class Noticias extends Usuario{
 
-    private int ID;
-    private String TITULO;
-    private String CONTEUDO;
-    private String DATA_PUBLICACAO;
-    private String FONTE;
-    private Usuario AUTOR_ID;
+    private int id_noticias;
+    private String titulo_usuario;
+    private String conteudo_noticias;
+    private String data_publicacao_noticias;
+    private String fonte_noticias;
+    private Usuario autor_id_noticias;
 
     public Noticias (){}
 
-    public Noticias(int ID, String TITULO, String CONTEUDO, String DATA_PUBLICACAO, String FONTE, Usuario AUTOR_ID) {
-        this.ID = ID;
-        this.TITULO = TITULO;
-        this.CONTEUDO = CONTEUDO;
-        this.DATA_PUBLICACAO = DATA_PUBLICACAO;
-        this.FONTE = FONTE;
-        this.AUTOR_ID = AUTOR_ID;
+    public Noticias(int id_noticias, String titulo_usuario, String conteudo_noticias, String data_publicacao_noticias, String fonte_noticias, Usuario autor_id_noticias) {
+        this.id_noticias = id_noticias;
+        this.titulo_usuario = titulo_usuario;
+        this.conteudo_noticias = conteudo_noticias;
+        this.data_publicacao_noticias = data_publicacao_noticias;
+        this.fonte_noticias = fonte_noticias;
+        this.autor_id_noticias = autor_id_noticias;
     }
 
-    public Noticias(int ID, String NOME, String EMAIL, String SENHA, String TIPO_USUARIO, int PONTOS, int ID1, String TITULO, String CONTEUDO, String DATA_PUBLICACAO, String FONTE, Usuario AUTOR_ID) {
-        super(ID, NOME, EMAIL, SENHA, TIPO_USUARIO, PONTOS);
-        this.ID = ID1;
-        this.TITULO = TITULO;
-        this.CONTEUDO = CONTEUDO;
-        this.DATA_PUBLICACAO = DATA_PUBLICACAO;
-        this.FONTE = FONTE;
-        this.AUTOR_ID = AUTOR_ID;
+    public Noticias(int id_noticias, String NOME, String EMAIL, String SENHA, String TIPO_USUARIO, int PONTOS, int id_noticias1, String titulo_usuario, String conteudo_noticias, String data_publicacao_noticias, String fonte_noticias, Usuario autor_id_noticias) {
+        super(id_noticias, NOME, EMAIL, SENHA, TIPO_USUARIO, PONTOS);
+        this.id_noticias = id_noticias1;
+        this.titulo_usuario = titulo_usuario;
+        this.conteudo_noticias = conteudo_noticias;
+        this.data_publicacao_noticias = data_publicacao_noticias;
+        this.fonte_noticias = fonte_noticias;
+        this.autor_id_noticias = autor_id_noticias;
     }
 
-    @Override
-    public int getID() {
-        return ID;
+    public int getId_noticias() {
+        return id_noticias;
     }
 
-    @Override
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId_noticias(int id_noticias) {
+        this.id_noticias = id_noticias;
     }
 
-    public String getTITULO() {
-        return TITULO;
+    public String getTitulo_usuario() {
+        return titulo_usuario;
     }
 
-    public void setTITULO(String TITULO) {
-        this.TITULO = TITULO;
+    public void setTitulo_usuario(String titulo_usuario) {
+        this.titulo_usuario = titulo_usuario;
     }
 
-    public String getCONTEUDO() {
-        return CONTEUDO;
+    public String getConteudo_noticias() {
+        return conteudo_noticias;
     }
 
-    public void setCONTEUDO(String CONTEUDO) {
-        this.CONTEUDO = CONTEUDO;
+    public void setConteudo_noticias(String conteudo_noticias) {
+        this.conteudo_noticias = conteudo_noticias;
     }
 
-    public String getDATA_PUBLICACAO() {
-        return DATA_PUBLICACAO;
+    public String getData_publicacao_noticias() {
+        return data_publicacao_noticias;
     }
 
-    public void setDATA_PUBLICACAO(String DATA_PUBLICACAO) {
-        this.DATA_PUBLICACAO = DATA_PUBLICACAO;
+    public void setData_publicacao_noticias(String data_publicacao_noticias) {
+        this.data_publicacao_noticias = data_publicacao_noticias;
     }
 
-    public String getFONTE() {
-        return FONTE;
+    public String getFonte_noticias() {
+        return fonte_noticias;
     }
 
-    public void setFONTE(String FONTE) {
-        this.FONTE = FONTE;
+    public void setFonte_noticias(String fonte_noticias) {
+        this.fonte_noticias = fonte_noticias;
     }
 
-    public Usuario getAUTOR_ID() {
-        return AUTOR_ID;
+    public Usuario getAutor_id_noticias() {
+        return autor_id_noticias;
     }
 
-    public void setAUTOR_ID(Usuario AUTOR_ID) {
-        this.AUTOR_ID = AUTOR_ID;
+    public void setAutor_id_noticias(Usuario autor_id_noticias) {
+        this.autor_id_noticias = autor_id_noticias;
     }
 
     @Override
     public String toString() {
         return new StringJoiner(", ", Noticias.class.getSimpleName() + "[", "]")
-                .add("ID=" + ID)
-                .add("TITULO='" + TITULO + "'")
-                .add("CONTEUDO='" + CONTEUDO + "'")
-                .add("DATA_PUBLICACAO='" + DATA_PUBLICACAO + "'")
-                .add("FONTE='" + FONTE + "'")
-                .add("AUTOR_ID=" + AUTOR_ID)
+                .add("id_noticias=" + id_noticias)
+                .add("titulo_usuario='" + titulo_usuario + "'")
+                .add("conteudo_noticias='" + conteudo_noticias + "'")
+                .add("data_publicacao_noticias='" + data_publicacao_noticias + "'")
+                .add("fonte_noticias='" + fonte_noticias + "'")
+                .add("autor_id_noticias=" + autor_id_noticias)
                 .toString();
     }
 }

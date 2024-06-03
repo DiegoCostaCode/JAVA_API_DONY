@@ -1,62 +1,74 @@
 package org.example.Entities;
 
+import org.glassfish.jersey.message.internal.MatchingEntityTag;
+
 import java.util.StringJoiner;
 
-public class Material{
+public class Material extends Instituicao {
 
-    private int ID;
-    private String NOME;
-    private String DESCRICAO;
-    private String DECOMPOSICAO;
+    private int id_material;
+    private String nome;
+    private String descricao_material;
+    private String decomposicao;
+    private Instituicao publicitario_id;
 
     public Material(){}
 
-    public Material(int ID, String NOME, String DESCRICAO, String DECOMPOSICAO) {
-        this.ID = ID;
-        this.NOME = NOME;
-        this.DESCRICAO = DESCRICAO;
-        this.DECOMPOSICAO = DECOMPOSICAO;
+    public Material(int id_material, String nome, String descricao_material, String decomposicao, Instituicao publicitario_id) {
+        this.id_material = id_material;
+        this.nome = nome;
+        this.descricao_material = descricao_material;
+        this.decomposicao = decomposicao;
+        this.publicitario_id = publicitario_id;
     }
 
-    public int getID() {
-        return ID;
+    public int getId_material() {
+        return id_material;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId_material(int id_material) {
+        this.id_material = id_material;
     }
 
-    public String getNOME() {
-        return NOME;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNOME(String NOME) {
-        this.NOME = NOME;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getDESCRICAO() {
-        return DESCRICAO;
+    public String getDescricao_material() {
+        return descricao_material;
     }
 
-    public void setDESCRICAO(String DESCRICAO) {
-        this.DESCRICAO = DESCRICAO;
+    public void setDescricao_material(String descricao_material) {
+        this.descricao_material = descricao_material;
     }
 
-    public String getDECOMPOSICAO() {
-        return DECOMPOSICAO;
+    public String getDecomposicao() {
+        return decomposicao;
     }
 
-    public void setDECOMPOSICAO(String DECOMPOSICAO) {
-        this.DECOMPOSICAO = DECOMPOSICAO;
+    public void setDecomposicao(String decomposicao) {
+        this.decomposicao = decomposicao;
     }
 
+    public Instituicao getPublicitario_id() {
+        return publicitario_id;
+    }
+
+    public void setPublicitario_id(Instituicao publicitario_id) {
+        this.publicitario_id = publicitario_id;
+    }
     @Override
     public String toString() {
         return new StringJoiner(", ", Material.class.getSimpleName() + "[", "]")
-                .add("ID=" + ID)
-                .add("NOME='" + NOME + "'")
-                .add("DESCRICAO='" + DESCRICAO + "'")
-                .add("DECOMPOSICAO='" + DECOMPOSICAO + "'")
+                .add("id_material=" + id_material)
+                .add("nome='" + nome + "'")
+                .add("descricao_material='" + descricao_material + "'")
+                .add("decomposicao='" + decomposicao + "'")
+                .add("publicitario_id=" + publicitario_id)
                 .toString();
     }
 }

@@ -26,22 +26,18 @@ public class Instituicao extends Usuario{
         this.USUARIO_ID = USUARIO_ID;
     }
 
-    @Override
     public int getID() {
         return ID;
     }
 
-    @Override
     public void setID(int ID) {
         this.ID = ID;
     }
 
-    @Override
     public String getNOME() {
         return NOME;
     }
 
-    @Override
     public void setNOME(String NOME) {
         this.NOME = NOME;
     }
