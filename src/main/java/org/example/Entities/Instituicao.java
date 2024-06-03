@@ -1,70 +1,50 @@
 package org.example.Entities;
 
-import java.util.StringJoiner;
+public class Instituicao extends _BaseEntity{
 
-public class Instituicao extends Usuario{
-
-    private int ID;
-    private String NOME;
-    private String SITE;
-    private Usuario USUARIO_ID;
+    private String nome_instituicao;
+    private String site;
+    private Usuario representante_id;
 
     public Instituicao(){}
 
-    public Instituicao(int ID, String NOME, String SITE, Usuario USUARIO_ID) {
-        this.ID = ID;
-        this.NOME = NOME;
-        this.SITE = SITE;
-        this.USUARIO_ID = USUARIO_ID;
+    public Instituicao(int id_entidade, String nome_instituicao, String site, Usuario representante_id) {
+        super(id_entidade);
+        this.nome_instituicao = nome_instituicao;
+        this.site = site;
+        this.representante_id = representante_id;
     }
 
-    public Instituicao(int ID, String NOME, String EMAIL, String SENHA, String TIPO_USUARIO, int PONTOS, int ID1, String NOME1, String SITE, Usuario USUARIO_ID) {
-        super(ID, NOME, EMAIL, SENHA, TIPO_USUARIO, PONTOS);
-        this.ID = ID1;
-        this.NOME = NOME1;
-        this.SITE = SITE;
-        this.USUARIO_ID = USUARIO_ID;
+    public String getNome_instituicao() {
+        return nome_instituicao;
     }
 
-    public int getID() {
-        return ID;
+    public void setNome_instituicao(String nome_instituicao) {
+        this.nome_instituicao = nome_instituicao;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public String getSite() {
+        return site;
     }
 
-    public String getNOME() {
-        return NOME;
+    public void setSite(String site) {
+        this.site = site;
     }
 
-    public void setNOME(String NOME) {
-        this.NOME = NOME;
+    public Usuario getRepresentante_id() {
+        return representante_id;
     }
 
-    public String getSITE() {
-        return SITE;
-    }
-
-    public void setSITE(String SITE) {
-        this.SITE = SITE;
-    }
-
-    public Usuario getUSUARIO_ID() {
-        return USUARIO_ID;
-    }
-
-    public void setUSUARIO_ID(Usuario USUARIO_ID) {
-        this.USUARIO_ID = USUARIO_ID;
+    public void setRepresentante_id(Usuario representante_id) {
+        this.representante_id = representante_id;
     }
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", Instituicao.class.getSimpleName() + "[", "]")
-                .add("ID=" + ID)
-                .add("NOME='" + NOME + "'")
-                .add("SITE='" + SITE + "'")
-                .add("USUARIO_ID=" + USUARIO_ID)
-                .toString();
+        return "Instituicao{" +
+                "nome_instituicao='" + nome_instituicao + '\'' +
+                ", site='" + site + '\'' +
+                ", representante_id=" + representante_id +
+                '}';
     }
 }

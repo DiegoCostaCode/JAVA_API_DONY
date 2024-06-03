@@ -2,18 +2,18 @@ package org.example.Entities;
 
 import java.util.StringJoiner;
 
-public class Produto{
+public class Reciclagem extends _BaseEntity {
 
     private int id_produto;
     private String titulo;
     private String cod_barras;
     private String thumbnail;
-    private int material_id;
-    private int usuario_id;
+    private Material material_id;
+    private Usuario usuario_id;
 
-    public Produto(){}
+    public Reciclagem(){}
 
-    public Produto(int id_produto, String titulo, String cod_barras, String thumbnail, int material_id, int usuario_id) {
+    public Reciclagem(int id_produto, String titulo, String cod_barras, String thumbnail, Material material_id, Usuario usuario_id) {
         this.id_produto = id_produto;
         this.titulo = titulo;
         this.cod_barras = cod_barras;
@@ -54,31 +54,31 @@ public class Produto{
         this.thumbnail = thumbnail;
     }
 
-    public int getMaterial_id() {
+    public Material getMaterial_id() {
         return material_id;
     }
 
-    public void setMaterial_id(int material_id) {
+    public void setMaterial_id(Material material_id) {
         this.material_id = material_id;
     }
 
-    public int getUsuario_id() {
+    public Usuario getUsuario_id() {
         return usuario_id;
     }
 
-    public void setUsuario_id(int usuario_id) {
+    public void setUsuario_id(Usuario usuario_id) {
         this.usuario_id = usuario_id;
     }
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", Produto.class.getSimpleName() + "[", "]")
-                .add("id_produto=" + id_produto)
-                .add("titulo='" + titulo + "'")
-                .add("cod_barras='" + cod_barras + "'")
-                .add("thumbnail='" + thumbnail + "'")
-                .add("material_id=" + material_id)
-                .add("usuario_id=" + usuario_id)
-                .toString();
+        return "Reciclagem{" +
+                "id_produto=" + id_produto +
+                ", titulo='" + titulo + '\'' +
+                ", cod_barras='" + cod_barras + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
+                ", material_id=" + material_id +
+                ", usuario_id=" + usuario_id +
+                "} " + super.toString();
     }
 }

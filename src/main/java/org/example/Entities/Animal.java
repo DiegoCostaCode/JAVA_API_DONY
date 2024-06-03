@@ -1,51 +1,39 @@
 package org.example.Entities;
 
-import java.util.StringJoiner;
+public class Animal extends _BaseEntity{
 
-public class Animal {
-
-    private int ID;
-    private String Nome;
-    private String Descricao;
+    private String nome_animal;
+    private String descricao_animal;
 
     public Animal(){}
 
-    public Animal(int ID, String nome, String descricao) {
-        this.ID = ID;
-        Nome = nome;
-        Descricao = descricao;
+    public Animal(int id_entidade, String nome_animal, String descricao_animal) {
+        super(id_entidade);
+        this.nome_animal = nome_animal;
+        this.descricao_animal = descricao_animal;
     }
 
-    public int getID() {
-        return ID;
+    public String getNome_animal() {
+        return nome_animal;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setNome_animal(String nome_animal) {
+        this.nome_animal = nome_animal;
     }
 
-    public String getNome() {
-        return Nome;
+    public String getDescricao_animal() {
+        return descricao_animal;
     }
 
-    public void setNome(String nome) {
-        Nome = nome;
-    }
-
-    public String getDescricao() {
-        return Descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        Descricao = descricao;
+    public void setDescricao_animal(String descricao_animal) {
+        this.descricao_animal = descricao_animal;
     }
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", Animal.class.getSimpleName() + "[", "]")
-                .add("ID=" + ID)
-                .add("Nome='" + Nome + "'")
-                .add("Descricao='" + Descricao + "'")
-                .toString();
+        return "Animal{" +
+                "nome_animal='" + nome_animal + '\'' +
+                ", descricao_animal='" + descricao_animal + '\'' +
+                "} " + super.toString();
     }
 }

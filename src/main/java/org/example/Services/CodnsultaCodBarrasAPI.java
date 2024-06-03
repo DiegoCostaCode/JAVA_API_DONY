@@ -2,7 +2,7 @@ package org.example.Services;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.Entities.Produto;
+import org.example.Entities.Reciclagem;
 
 import java.io.IOException;
 import java.net.URI;
@@ -11,7 +11,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
-public class CosmoAPI{
+public class CodnsultaCodBarrasAPI {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite o código de barras (GTIN): ");
@@ -36,14 +36,14 @@ public class CosmoAPI{
         String gtinValue = jsonNode.get("gtin").asText();
         String thumbnail = jsonNode.get("thumbnail").asText();
 
-        Produto produto = new Produto();
-        produto.setTitulo(description);
-        produto.setCod_barras(gtinValue);
-        produto.setThumbnail(thumbnail);
+        Reciclagem reciclagem = new Reciclagem();
+        reciclagem.setTitulo(description);
+        reciclagem.setCod_barras(gtinValue);
+        reciclagem.setThumbnail(thumbnail);
 
         System.out.println("Produto criado:");
-        System.out.println("Título: " + produto.getTitulo());
-        System.out.println("Código de barras: " + produto.getCod_barras());
-        System.out.println("Thumbnail: " + produto.getThumbnail());
+        System.out.println("Título: " + reciclagem.getTitulo());
+        System.out.println("Código de barras: " + reciclagem.getCod_barras());
+        System.out.println("Thumbnail: " + reciclagem.getThumbnail());
     }
 }

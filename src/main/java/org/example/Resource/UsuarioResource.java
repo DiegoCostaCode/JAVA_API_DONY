@@ -1,4 +1,4 @@
-package org.example.Services;
+package org.example.Resource;
 
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Path("/usuario")
 public class UsuarioResource implements Loggable{
-
+    UsuarioRepository usuarioRepository = new UsuarioRepository();
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(Usuario usuario)
