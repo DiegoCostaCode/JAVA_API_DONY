@@ -57,4 +57,19 @@ public class Usuario extends _BaseEntity {
     public void setPontos_usuario(int pontos_usuario) {
         this.pontos_usuario = pontos_usuario;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("org.example.Entities.Usuario{");
+        sb.append("nome_usuario='").append(nome_usuario).append('\'');
+        sb.append(", email_usuario='").append(email_usuario).append('\'');
+        sb.append(", senha_usuario='").append(senha_usuario).append('\'');
+        sb.append(", tipo_usuario='").append(tipo_usuario).append('\'');
+        sb.append(", pontos_usuario=").append(pontos_usuario);
+        sb.append('}');
+        return sb.toString();
+    }
 }
+
+
+

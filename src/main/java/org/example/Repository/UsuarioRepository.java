@@ -17,6 +17,9 @@ public class UsuarioRepository extends DatabaseConfiguration implements Loggable
 
     @Override
     public void Create(Usuario entidade) {
+
+        Usuario usuario = new Usuario();
+
         String sql = "INSERT INTO USUARIO (ID, NOME, EMAIL, SENHA, TIPO_USUARIO, PONTOS) VALUES (USUARIO_SEQ.nextval,?,?,?,?,?)";
 
         try (Connection connection = getConnection();
