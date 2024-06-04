@@ -14,6 +14,7 @@ import java.util.List;
 public class UsuarioRepository extends DatabaseConfiguration implements Loggable<String>,_BaseRepository<Usuario>{
 
 
+
     @Override
     public void Create(Usuario entidade) {
         String sql = "INSERT INTO USUARIO (ID, NOME, EMAIL, SENHA, TIPO_USUARIO, PONTOS) VALUES (USUARIO_SEQ.nextval,?,?,?,?,?)";

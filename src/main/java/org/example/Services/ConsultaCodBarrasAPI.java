@@ -11,7 +11,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Scanner;
 
-public class CodnsultaCodBarrasAPI {
+public class ConsultaCodBarrasAPI {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite o código de barras (GTIN): ");

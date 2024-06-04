@@ -18,7 +18,7 @@ public class UsuarioResource implements Loggable{
     {
         try
         {
-            UsuarioRepository.create(usuario);
+            usuarioRepository.Create(usuario);
             Loggable.logInfo("Enviando ao banco de dados...");
             return Response.status(Response.Status.CREATED).build();
         }
@@ -34,11 +34,10 @@ public class UsuarioResource implements Loggable{
     public Response read()
     {
         try{
-            List<Usuario> usuarios = UsuarioRepository.read();
 
             Loggable.logInfo("Buscador de usuarios executado com sucesso!");
 
-            return Response.ok(usuarios).build();
+            return Response.ok(usuarioRepository.Read()).build();
         } catch (Exception e) {
             Loggable.logError("Não foi possível buscar os cadastros" + e.getMessage());
             return Response.serverError().build();
