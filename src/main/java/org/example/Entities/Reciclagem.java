@@ -1,10 +1,7 @@
 package org.example.Entities;
 
-import java.util.StringJoiner;
-
 public class Reciclagem extends _BaseEntity {
 
-    private int id_produto;
     private String titulo;
     private String cod_barras;
     private String thumbnail;
@@ -13,21 +10,14 @@ public class Reciclagem extends _BaseEntity {
 
     public Reciclagem(){}
 
-    public Reciclagem(int id_produto, String titulo, String cod_barras, String thumbnail, Material material_id, Usuario usuario_id) {
-        this.id_produto = id_produto;
+
+    public Reciclagem(int id_entidade, String titulo, String cod_barras, String thumbnail, Material material_id, Usuario usuario_id) {
+        super(id_entidade);
         this.titulo = titulo;
         this.cod_barras = cod_barras;
         this.thumbnail = thumbnail;
         this.material_id = material_id;
         this.usuario_id = usuario_id;
-    }
-
-    public int getId_produto() {
-        return id_produto;
-    }
-
-    public void setId_produto(int id_produto) {
-        this.id_produto = id_produto;
     }
 
     public String getTitulo() {
@@ -72,13 +62,13 @@ public class Reciclagem extends _BaseEntity {
 
     @Override
     public String toString() {
-        return "Reciclagem{" +
-                "id_produto=" + id_produto +
-                ", titulo='" + titulo + '\'' +
-                ", cod_barras='" + cod_barras + '\'' +
-                ", thumbnail='" + thumbnail + '\'' +
-                ", material_id=" + material_id +
-                ", usuario_id=" + usuario_id +
-                "} " + super.toString();
+        final StringBuilder sb = new StringBuilder("org.example.Entities.Reciclagem{");
+        sb.append("titulo='").append(titulo).append('\'');
+        sb.append(", cod_barras='").append(cod_barras).append('\'');
+        sb.append(", thumbnail='").append(thumbnail).append('\'');
+        sb.append(", material_id=").append(material_id);
+        sb.append(", usuario_id=").append(usuario_id);
+        sb.append('}');
+        return sb.toString();
     }
 }

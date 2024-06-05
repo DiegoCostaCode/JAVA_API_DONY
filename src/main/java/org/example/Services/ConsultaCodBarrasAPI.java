@@ -8,6 +8,7 @@ import org.example.Entities.Reciclagem;
 import org.example.Entities.Usuario;
 import org.example.Infrastructure.Loggable;
 import org.example.Repository.MaterialRepository;
+import org.example.Repository.ReciclagemRepository;
 import org.example.Repository.UsuarioRepository;
 
 import java.io.IOException;
@@ -29,6 +30,7 @@ public class ConsultaCodBarrasAPI extends UsuarioRepository implements Loggable<
 
         UsuarioRepository usuarioRepository = new UsuarioRepository();
         MaterialRepository materialRepository = new MaterialRepository();
+        ReciclagemRepository reciclagemRepository = new ReciclagemRepository();
 
         List<Usuario> usuarios = usuarioRepository.Read();
         List<Material> materiais = materialRepository.Read();
@@ -36,17 +38,19 @@ public class ConsultaCodBarrasAPI extends UsuarioRepository implements Loggable<
         System.out.print("Digite o seu ID: ");
         int Id = scanner.nextInt();
 
-        Usuario usuario = usuarios.stream()
+        Usuario usuarioID = null;
+
+        usuarioID = usuarios.stream()
                 .filter(u -> u.getId_entidade() == Id)
                 .findFirst()
                 .orElse(null);
 
-        if (usuario == null) {
+        if (usuarioID == null) {
             Loggable.logInfo("ID inválido. Por favor, se cadastre para cadastrar produtos.");
             return;
         }
 
-        System.out.println("Bem-vindo " + usuario.getNome_usuario());
+        System.out.println("Bem-vindo " + usuarioID.getNome_usuario());
 
         System.out.print("De 1 a 3, por favor, escolha a categoria do produto reciclável: \n 1 - Plástico;\n 2 - Lata;\n 3 - Vidro;\n");
         int category = scanner.nextInt();
@@ -109,14 +113,16 @@ public class ConsultaCodBarrasAPI extends UsuarioRepository implements Loggable<
         reciclagem.setTitulo(description);
         reciclagem.setCod_barras(gtinValue);
         reciclagem.setThumbnail(thumbnail);
-        reciclagem.setUsuario_id(usuario);
         reciclagem.setMaterial_id(material);
+        reciclagem.setUsuario_id(usuarioID);
+
+        reciclagemRepository.Create(reciclagem);
 
         System.out.println("Produto criado:");
         System.out.println("Título: " + reciclagem.getTitulo());
         System.out.println("Código de barras: " + reciclagem.getCod_barras());
         System.out.println("Thumbnail: " + reciclagem.getThumbnail());
-        System.out.println("Usuário: " + reciclagem.getUsuario_id().getNome_usuario());
+        System.out.println("Usuário: " + reciclagem.getUsuario_id().getId_entidade());
         System.out.println("Material: " + reciclagem.getMaterial_id().getNome_material());
     }
 }
