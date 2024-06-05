@@ -82,6 +82,7 @@ public class ConsultaCodBarrasAPI extends UsuarioRepository implements Loggable<
         String gtin = scanner.nextLine();
 
         String url = "https://api.cosmos.bluesoft.com.br/gtins/" + gtin;
+
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))
