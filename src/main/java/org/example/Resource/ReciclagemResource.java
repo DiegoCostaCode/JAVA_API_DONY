@@ -8,7 +8,7 @@ import org.example.Entities.Reciclagem;
 import org.example.Infrastructure.Loggable;
 import org.example.Repository.ReciclagemRepository;
 
-@Path("/produto")
+@Path("/reciclagem")
 public class ReciclagemResource implements Loggable<String>{
 
     ReciclagemRepository reciclagemRepository = new ReciclagemRepository();

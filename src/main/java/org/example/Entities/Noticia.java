@@ -19,7 +19,7 @@ public class Noticia extends _BaseEntity{
         this.thumbnail_noticia = thumbnail_noticia;
     }
 
-    public String getTitulo_noticia(String title) {
+    public String getTitulo_noticia() {
         return titulo_noticia;
     }
 
@@ -27,7 +27,7 @@ public class Noticia extends _BaseEntity{
         this.titulo_noticia = titulo_noticia;
     }
 
-    public String getConteudo(String description) {
+    public String getConteudo() {
         return conteudo;
     }
 
@@ -35,7 +35,7 @@ public class Noticia extends _BaseEntity{
         this.conteudo = conteudo;
     }
 
-    public String getData_publicacao(String publishedAt) {
+    public String getData_publicacao() {
         return data_publicacao;
     }
 
@@ -43,7 +43,7 @@ public class Noticia extends _BaseEntity{
         this.data_publicacao = data_publicacao;
     }
 
-    public String getFonte_noticia(String fonte) {
+    public String getFonte_noticia() {
         return fonte_noticia;
     }
 
@@ -51,8 +51,7 @@ public class Noticia extends _BaseEntity{
         this.fonte_noticia = fonte_noticia;
     }
 
-
-    public String getThumbnail_noticia(String thumbnail) {
+    public String getThumbnail_noticia() {
         return thumbnail_noticia;
     }
 

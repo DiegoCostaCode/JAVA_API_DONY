@@ -34,7 +34,6 @@ public class UsuarioResource implements Loggable{
     public Response read()
     {
         try{
-
             Loggable.logInfo("Buscador de usuarios executado com sucesso!");
 
             return Response.ok(usuarioRepository.Read()).build();

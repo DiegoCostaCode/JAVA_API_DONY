@@ -56,7 +56,6 @@ public class NoticiasOceano implements Loggable<String> {
                 for (JsonNode article : articles) {
                     String title = article.get("title").asText();
                     String description = article.get("description").asText();
-
                     String fonte = article.get("url").asText();
                     String publishedAt = article.get("publishedAt").asText();
                     String thumbnail = article.get("urlToImage").asText();

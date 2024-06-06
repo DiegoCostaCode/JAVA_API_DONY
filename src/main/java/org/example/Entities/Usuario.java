@@ -58,10 +58,6 @@ public class Usuario extends _BaseEntity {
         this.pontos_usuario = pontos_usuario;
     }
 
-    public Usuario getId() {
-        return this ;
-    }
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("org.example.Entities.Usuario{");

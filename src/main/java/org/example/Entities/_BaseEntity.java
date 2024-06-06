@@ -17,4 +17,11 @@ public abstract class _BaseEntity {
     public void setId_entidade(int id_entidade) {
         this.id_entidade = id_entidade;
     }
+
+    @Override
+    public String toString() {
+        return "_BaseEntity{" +
+                "id_entidade=" + id_entidade +
+                '}';
+    }
 }
