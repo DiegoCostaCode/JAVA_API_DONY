@@ -24,11 +24,11 @@ public class NoticiaRepository implements Loggable<String>,_BaseRepository<Notic
              PreparedStatement ps = connection.prepareStatement(sql)) {
 
 
-            ps.setString(1, entidade.getTitulo_noticia("TITULO"));
-            ps.setString(2, entidade.getConteudo("CONTEUDO"));
-            ps.setString(3, entidade.getData_publicacao("DATA_PUBLICACAO"));
-            ps.setString(4, entidade.getFonte_noticia("FONTE"));
-            ps.setString(5, entidade.getThumbnail_noticia("THUMBNAIL"));
+            ps.setString(1, entidade.getTitulo_noticia());
+            ps.setString(2, entidade.getConteudo());
+            ps.setString(3, entidade.getData_publicacao());
+            ps.setString(4, entidade.getFonte_noticia());
+            ps.setString(5, entidade.getThumbnail_noticia());
 
 
             int rowsAffected = ps.executeUpdate(); // Execute a atualização sem esperar por um resultado

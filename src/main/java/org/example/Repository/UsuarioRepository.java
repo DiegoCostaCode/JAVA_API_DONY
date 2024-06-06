@@ -99,5 +99,4 @@ public class UsuarioRepository extends DatabaseConfiguration implements Loggable
         return null;
     }
 
-
 }
