@@ -67,7 +67,6 @@ public class NoticiasOceano implements Loggable<String> {
                         noticia.setFonte_noticia(fonte);
                         noticia.setThumbnail_noticia(thumbnail);
                         noticia.setData_publicacao(publishedAt);
-
                         noticiaRepository.Create(noticia);
 
                         System.out.println("Título: " + title);
@@ -76,7 +75,6 @@ public class NoticiasOceano implements Loggable<String> {
                         System.out.println("Data: " + publishedAt);
                         System.out.println("Thumbnail: " + thumbnail);
                         System.out.println("---------------------------------");
-
                     }
                 }
             }
