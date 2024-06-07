@@ -2,7 +2,7 @@ package org.example.Repository;
 
 import org.example.Entities.Material;
 import org.example.Entities.Usuario;
-import org.example.Infrastructure.Loggable;
+import org.example.Config.Loggable;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.example.Infrastructure.DatabaseConfiguration.getConnection;
+import static org.example.Config.DatabaseConfiguration.getConnection;
 
 public class MaterialRepository implements Loggable<String>,_BaseRepository<Material> {
     @Override

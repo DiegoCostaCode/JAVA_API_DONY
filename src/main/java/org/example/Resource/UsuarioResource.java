@@ -4,10 +4,8 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.example.Entities.Usuario;
-import org.example.Infrastructure.Loggable;
+import org.example.Config.Loggable;
 import org.example.Repository.UsuarioRepository;
-
-import java.util.List;
 
 @Path("/usuario")
 public class UsuarioResource implements Loggable{

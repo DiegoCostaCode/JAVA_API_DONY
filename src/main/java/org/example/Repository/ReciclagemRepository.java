@@ -1,9 +1,8 @@
 package org.example.Repository;
 
 import org.example.Entities.Reciclagem;
-import org.example.Entities.Usuario;
-import org.example.Infrastructure.DatabaseConfiguration;
-import org.example.Infrastructure.Loggable;
+import org.example.Config.DatabaseConfiguration;
+import org.example.Config.Loggable;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

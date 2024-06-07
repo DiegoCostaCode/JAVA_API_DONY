@@ -4,7 +4,7 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.example.Entities.Material;
-import org.example.Infrastructure.Loggable;
+import org.example.Config.Loggable;
 import org.example.Repository.MaterialRepository;
 
 @Path("/material")

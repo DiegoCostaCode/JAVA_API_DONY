@@ -1,8 +1,7 @@
 package org.example.Repository;
 
 import org.example.Entities.Projeto;
-import org.example.Entities._BaseEntity;
-import org.example.Infrastructure.Loggable;
+import org.example.Config.Loggable;
 
 import java.util.List;
 

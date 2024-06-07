@@ -1,8 +1,8 @@
 package org.example.Repository;
 
 import org.example.Entities.Usuario;
-import org.example.Infrastructure.DatabaseConfiguration;
-import org.example.Infrastructure.Loggable;
+import org.example.Config.DatabaseConfiguration;
+import org.example.Config.Loggable;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +10,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class UsuarioRepository extends DatabaseConfiguration implements Loggable<String>,_BaseRepository<Usuario>{
 

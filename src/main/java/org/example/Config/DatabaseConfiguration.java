@@ -1,4 +1,4 @@
-package org.example.Infrastructure;
+package org.example.Config;
 
 import java.io.FileInputStream;
 import java.io.IOException;

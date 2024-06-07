@@ -1,11 +1,11 @@
-package org.example.Services;
+package org.example.Infrastructure;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.Entities.Instituicao;
 import org.example.Entities.Noticia;
 import org.example.Entities.Usuario;
-import org.example.Infrastructure.Loggable;
+import org.example.Config.Loggable;
 import org.example.Repository.NoticiaRepository;
 
 import java.io.BufferedReader;

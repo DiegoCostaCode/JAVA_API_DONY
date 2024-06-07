@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.Infrastructure.CorsFilter;
+import org.example.Config.CorsFilter;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;

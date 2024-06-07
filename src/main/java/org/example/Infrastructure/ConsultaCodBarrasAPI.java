@@ -1,4 +1,4 @@
-package org.example.Services;
+package org.example.Infrastructure;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.Entities.Material;
 import org.example.Entities.Reciclagem;
 import org.example.Entities.Usuario;
-import org.example.Infrastructure.Loggable;
+import org.example.Config.Loggable;
 import org.example.Repository.MaterialRepository;
 import org.example.Repository.ReciclagemRepository;
 import org.example.Repository.UsuarioRepository;
@@ -16,7 +16,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
