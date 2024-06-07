@@ -1,4 +1,4 @@
-# DONY - GS FIAP (em desenvolvimento)
+![image](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/a815ea08-1068-4085-b7d6-f5a8f0ae2e37)# DONY - GS FIAP (em desenvolvimento)
 
 ## Descrição do Projeto
 
@@ -31,19 +31,20 @@ Veja o diagrama de classes do projeto [aqui](link para o diagrama de classes).
 
 ## APIs Consumidas
 
-Dentro da infraestrutura do projeto, há uma classe chamada `FakeCompanyService` responsável por consumir uma API de empresas fictícias. Também há uma classe para gerar QR codes usando outra API.
+Dentro de services, existem as classes [`ConsultaCodBarrasAPI`](https://cosmos.bluesoft.com.br/?__cf_chl_tk=By_wxCptStMAJ0ZAZr8zd0Pl8x5XWIY0vjckvW0iKe8-1717732854-0.0.1.1-3732) que consulta e traz informações sobre o código de barras fornecido pelo usuário, e
+[`NoticiasOceano`](https://newsapi.org/) que traz noticias em geral, mas que em nosso caso, setamos para trazes apenas noticias relacionadas ao tema do projeto. 
 
-## Telas do Front-end
+## Telas do Front-end até o momento:
 
-A seguir estão as telas desenvolvidas para o front-end, as quais interagem com o back-end:
+A seguir estão as telas desenvolvidas até o momento para o front-end, as quais interagem com o back-end:
 
-- Tela Principal
-- Tela de Denúncias
-- Tela de Registrar Denúncia
-- Tela de Doações
-- Tela de Login
-- Tela de Cadastro
+- Tela Principal:
+- ![image](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/ea69c1d8-d7ad-4334-a7ea-f7484d5609f1)
 
-## Arquivo de Logs
+- Seção com materiais reciclaveis, puxados da classe materiais:
+- ![image](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/ae877204-f350-4c55-8f67-deaecd94b661)
 
-O projeto possui um arquivo chamado `logs.log` que armazena todos os logs gerados pela aplicação. Caso ocorra algum erro, é possível verificar esse arquivo para identificar o problema. O arquivo está localizado na pasta `logs` dentro do projeto.
+- Tela de Registrar Denúncia:
+- ![image](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/8027714e-0d34-4065-966e-549deb5128fb)
+
+
