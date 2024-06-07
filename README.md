@@ -1,4 +1,4 @@
-# DONY - Solução Global
+# DONY - GS FIAP (em desenvolvimento)
 
 ## Descrição do Projeto
 
@@ -19,14 +19,11 @@ Para executar o projeto, siga os passos abaixo:
 A seguir estão os endpoints disponíveis na aplicação:
 
 - `/usuario`: Adiciona e lê todos cadastros.
-- `/reciclahem`: Adiciona e lê todos itens cadastrados por usuários e verificados na API .
-- `/doacao`: Adiciona, lê todas as doações e lê doações específicas.
-- `/usuario`: Adiciona, lê todos os usuários e lê usuários específicos.
-- `/fakecompany`: Lê todas as empresas de uma API consumida pelo Java.
-
-## Links Úteis
-
-- **Repositório do Projeto:** [https://github.com/yagoluucas/java-global](https://github.com/yagoluucas/java-global)
+- `/reciclagem`: Adiciona e lê todos itens cadastrados por usuários e verificados na API.
+- `/material`: Adiciona e lê os materiais cadastrados.
+- `/noticia`: lê todos as noticias e noticias especificas.
+- `/projeto`: Lê todos os projetos cadastrados, e projetos especificos.
+- `/instituicao`: Lê todos os cadastros de instituiçoes.
 
 ## Diagrama de Classes UML
 
