@@ -59,13 +59,13 @@ public class ConsultaCodBarrasAPI extends UsuarioRepository implements Loggable<
         Material material = null;
         switch (category) {
             case 1:
-                material = materiais.stream().filter(m -> m.getId_entidade() == 3).findFirst().orElse(null);
+                material = materiais.stream().filter(m -> m.getId_entidade() == 1).findFirst().orElse(null);
                 break;
             case 2:
-                material = materiais.stream().filter(m -> m.getId_entidade() == 4).findFirst().orElse(null);
+                material = materiais.stream().filter(m -> m.getId_entidade() == 2).findFirst().orElse(null);
                 break;
             case 3:
-                material = materiais.stream().filter(m -> m.getId_entidade() == 6).findFirst().orElse(null);
+                material = materiais.stream().filter(m -> m.getId_entidade() == 3).findFirst().orElse(null);
                 break;
             default:
                 Loggable.logInfo("Material não encontrado. Por favor, escolha novamente");

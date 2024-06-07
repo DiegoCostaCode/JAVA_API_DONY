@@ -18,7 +18,7 @@ public class MaterialRepository implements Loggable<String>,_BaseRepository<Mate
     public void Create(Material entidade) {
         Usuario usuario = new Usuario();
 
-        String sql = "INSERT INTO MATERIAL (ID, NOME, DESCRICAO, DECOMPOSICAO) VALUES (MATERIAL_SEQ.nextval,?,?,?)";
+        String sql = "INSERT INTO MATERIAL (ID, NOME, DESCRICAO, THUMBNAIL, DECOMPOSICAO) VALUES (MATERIAL_SEQ.nextval,?,?,?,?)";
 
         try (Connection connection = getConnection();
 
@@ -27,7 +27,8 @@ public class MaterialRepository implements Loggable<String>,_BaseRepository<Mate
             // Não é necessário definir um valor para a coluna ID, pois é gerado automaticamente pela sequência
             ps.setString(1, entidade.getNome_material());
             ps.setString(2, entidade.getDescricao_material());
-            ps.setFloat(3, entidade.getDecomposicao());
+            ps.setString(3, entidade.getThumbnail());
+            ps.setFloat(4, entidade.getDecomposicao());
 
             /*ps.executeUpdate(); // Execute a atualização sem esperar por um resultado*/
 
@@ -65,6 +66,7 @@ public class MaterialRepository implements Loggable<String>,_BaseRepository<Mate
                 material.setNome_material(rs.getString("NOME"));
                 material.setDescricao_material(rs.getString("DESCRICAO"));
                 material.setDecomposicao(rs.getFloat("DECOMPOSICAO"));
+                material.setThumbnail(rs.getString("THUMBNAIL"));
 
                 materiais.add(material);
 

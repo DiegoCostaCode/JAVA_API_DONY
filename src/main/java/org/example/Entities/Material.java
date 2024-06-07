@@ -4,14 +4,16 @@ public class Material extends _BaseEntity{
 
     private String nome_material;
     private String descricao_material;
+    private String thumbnail;
     private Float decomposicao;
 
     public Material(){}
 
-    public Material(int id_entidade, String nome_material, String descricao_material, Float decomposicao) {
+    public Material(int id_entidade, String nome_material, String descricao_material, String thumbnail, Float decomposicao) {
         super(id_entidade);
         this.nome_material = nome_material;
         this.descricao_material = descricao_material;
+        this.thumbnail = thumbnail;
         this.decomposicao = decomposicao;
     }
 
@@ -31,6 +33,14 @@ public class Material extends _BaseEntity{
         this.descricao_material = descricao_material;
     }
 
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
     public Float getDecomposicao() {
         return decomposicao;
     }
@@ -44,6 +54,7 @@ public class Material extends _BaseEntity{
         final StringBuilder sb = new StringBuilder("org.example.Entities.Material{");
         sb.append("nome_material='").append(nome_material).append('\'');
         sb.append(", descricao_material='").append(descricao_material).append('\'');
+        sb.append(", thumbnail='").append(thumbnail).append('\'');
         sb.append(", decomposicao=").append(decomposicao);
         sb.append('}');
         return sb.toString();

@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.example.Infrastructure.DatabaseConfiguration.getConnection;
@@ -49,7 +50,34 @@ public class NoticiaRepository implements Loggable<String>,_BaseRepository<Notic
 
     @Override
     public List<Noticia> Read() {
-        return null;
+        String sql = "SELECT * FROM NOTICIA"; //Query SQL
+
+        List<Noticia> noticias = new ArrayList<>();
+
+        try ( Connection connection = getConnection();
+
+              PreparedStatement ps = connection.prepareStatement(sql);
+              ResultSet rs = ps.executeQuery()){
+
+            while (rs.next()) {
+                Noticia noticia = new Noticia();
+
+                noticia.setId_entidade(rs.getInt("ID"));
+                noticia.setTitulo_noticia(rs.getString("TITULO"));
+                noticia.setConteudo((rs.getString("CONTEUDO")));
+                noticia.setData_publicacao(rs.getString("DATA_PUBLICACAO"));
+                noticia.setFonte_noticia(rs.getString("FONTE"));
+                noticia.setThumbnail_noticia(rs.getString("THUMBNAIL"));
+
+                noticias.add(noticia);
+
+                Loggable.logInfo("Trazendo as noticias cadastrados!");
+            }
+
+        } catch (SQLException e) {
+            Loggable.logError("Problema em executar a QUERY" + e.getMessage());
+        }
+        return noticias;
     }
 
     @Override

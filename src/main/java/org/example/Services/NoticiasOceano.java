@@ -1,6 +1,5 @@
 package org.example.Services;
 
-
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.example.Entities.Instituicao;
@@ -83,5 +82,5 @@ public class NoticiasOceano implements Loggable<String> {
             Loggable.logError("Error" + e.getMessage());
         }
     }
-    }
+}
 
