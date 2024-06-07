@@ -4,7 +4,6 @@ public class Projeto extends _BaseEntity{
 
     private String titulo_projeto;
     private String descricao_projeto;
-
     private String thumbnail;
     private Instituicao responsavel_id;
 

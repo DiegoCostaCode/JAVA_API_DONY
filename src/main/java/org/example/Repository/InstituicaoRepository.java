@@ -19,7 +19,7 @@ public class InstituicaoRepository implements Loggable<String>,_BaseRepository<I
     public void Create(Instituicao entidade) {
         Instituicao instituicao = new Instituicao();
 
-        String sql = "INSERT INTO INSTITUICAO (ID,NOME,RESUMO,CNPJ,EMAIL_CORPORATIVO,POSTADOR_ID) VALUES (INSTITUICAO_SEQ.nextval,?,?,?,?,?)";
+        String sql = "INSERT INTO INSTITUICAO(ID,NOME,RESUMO,CNPJ,EMAIL_CORPORATIVO,POSTADOR_ID) VALUES (INSTITUICAO_SEQ.nextval,?,?,?,?,?)";
 
         try (Connection connection = getConnection();
 
