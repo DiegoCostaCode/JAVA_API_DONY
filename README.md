@@ -46,7 +46,5 @@ A seguir estão as telas desenvolvidas até o momento para o front-end, as quais
 - Seção com materiais reciclaveis, puxados da classe materiais:
 - ![image](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/ae877204-f350-4c55-8f67-deaecd94b661)
 
-- Tela de Registrar Denúncia:
+- Seção com noticias, puxadas diretamente da classe de noticias:
 - ![image](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/8027714e-0d34-4065-966e-549deb5128fb)
-
-
