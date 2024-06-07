@@ -1,4 +1,6 @@
-![image](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/a815ea08-1068-4085-b7d6-f5a8f0ae2e37)# DONY - GS FIAP (em desenvolvimento)
+![logo2](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/60deafc1-b2ca-4258-9d84-106f18680d43)![Uploading l<svg width="543" height="158" viewBox="0 0 543 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+# DONY - GS FIAP (em desenvolvimento)
+
 
 ## Descrição do Projeto
 
