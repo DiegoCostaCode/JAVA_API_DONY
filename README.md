@@ -31,6 +31,9 @@ A seguir estão os endpoints disponíveis na aplicação:
 
 ![Dony](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/36bc5b5b-1f51-48f6-8465-590bec9a312c)
 
+##Video:
+
+[https://youtu.be/JLEPBLLdj_0](https://youtu.be/JLEPBLLdj_0)
 
 ## APIs Consumidas
 
