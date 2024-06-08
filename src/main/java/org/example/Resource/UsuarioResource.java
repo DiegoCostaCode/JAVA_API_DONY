@@ -10,6 +10,7 @@ import org.example.Repository.UsuarioRepository;
 @Path("/usuario")
 public class UsuarioResource implements Loggable{
     UsuarioRepository usuarioRepository = new UsuarioRepository();
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response create(Usuario usuario)

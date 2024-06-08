@@ -14,7 +14,6 @@ import java.util.List;
 public class UsuarioRepository extends DatabaseConfiguration implements Loggable<String>,_BaseRepository<Usuario>{
 
 
-
     @Override
     public void Create(Usuario entidade) {
 

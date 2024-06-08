@@ -14,7 +14,6 @@ public class ReciclagemRepository extends DatabaseConfiguration implements Logga
 
     @Override
     public void Create(Reciclagem entidade) {
-        Reciclagem reciclagem = new Reciclagem();
 
         String sql = "INSERT INTO RECICLAGEM (ID,TITULO,COD_BARRAS,THUMBNAIL,MATERIAL_ID,USUARIO_ID) VALUES (RECICLAGEM_SEQ.nextval,?,?,?,?,?)";
 
@@ -69,7 +68,7 @@ public class ReciclagemRepository extends DatabaseConfiguration implements Logga
         try ( Connection connection = getConnection();
         )
         {
-            String sql = "SELECT * FROM PRODUTO WHERE ID = ?"; //Query SQL
+            String sql = "SELECT * FROM RECICLAGEM WHERE ID = ?"; //Query SQL
 
             PreparedStatement ps = connection.prepareStatement(sql);
 
@@ -78,6 +77,7 @@ public class ReciclagemRepository extends DatabaseConfiguration implements Logga
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
+
 
                 reciclagem.setId_entidade(rs.getInt("ID"));
                 reciclagem.setTitulo(rs.getString("TITULO"));
