@@ -29,7 +29,7 @@ A seguir estão os endpoints disponíveis na aplicação:
 
 ## Diagrama de Classes UML
 
-Veja o diagrama de classes do projeto [aqui](link para o diagrama de classes).
+![Dony](https://github.com/DiegoCostaCode/JAVA_API_DONY/assets/142529378/19ce70ce-33c8-4d03-930c-fcdfb3c075a6)
 
 ## APIs Consumidas
 
